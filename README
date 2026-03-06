@@ -1,1 +1,20 @@
-See the wiki: https://github.com/andypohl/bwtool/wiki
+# Updates (since fork 2026.03)
+
+The original repo [CRG-Barcelona/bwtool](https://github.com/CRG-Barcelona/bwtool) seems to have been abandoned for quite some time, rendering it obsolete. This fork made the minimal changes to allow it to be built on a newer Linux platform (tested on Debian Linux,  gcc version 15.2.0 and 14.2.0).
+
+This also held true for the dependency [libbeato](https://github.com/JackieMium/libbeato), where the original [CRG-Barcelona/libbeato](https://github.com/CRG-Barcelona/libbeato) was forked and made similar changes.
+
+After the changes, simply clone this repo and [libbeato](https://github.com/JackieMium/libbeato) in the same location side by side and run:
+
+```
+./configure
+make
+```
+
+should be enough for both `libbeato` and `bwtool` to compile and successfully build. 
+
+Note that it is required that `libbeato` and `bwtool` reside in the same folder and that `libbeato` is to be built first since `bwtool` depends on `libbeato`. To build `bwtool`, `libhts-dev` may be required, however, it can be safely removed after the build process. After building `bwtool` is successfully built, the binary file `bwtool` can be moved to anywhere, ideally somewhere in system `PATH`, for example `/usr/local/bin/`.
+
+Getting started
+==============
+See the [wiki](https://github.com/andypohl/bwtool/wiki).
