@@ -5,6 +5,10 @@
 #include <float.h>
 #endif
 
+#include "jkweb/common.h"
+#include "jkweb/linefile.h"
+#include "beato/bigs.h"
+
 enum bw_op_type
 {
     invalid = 0,
